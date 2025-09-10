@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>表演藝術問卷</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-6">表演藝術問卷</h1>
+    <p class="mb-6 text-gray-600">適用對象：18–23歲大學生，無表演藝術背景。請依直覺填答。</p>
+
+    <form id="surveyForm" class="space-y-8">
+
+      <!-- 一、基礎概念 -->
+      <section>
+        <h2 class="text-2xl font-semibold mb-4">一、對表演藝術的基礎概念</h2>
+
+        <div class="mb-4">
+          <label class="block mb-2">1. 下列何者 <b>不屬於</b> 表演藝術範疇？</label>
+          <select name="q1" class="border rounded p-2 w-full" required>
+            <option value="">-- 請選擇 --</option>
+            <option>畫展</option>
+            <option>舞劇</option>
+            <option>戲曲</option>
+            <option>現代舞</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label class="block mb-2">2. 劇場開演後入場，通常應該？</label>
+          <select name="q2" class="border rounded p-2 w-full" required>
+            <option value="">-- 請選擇 --</option>
+            <option>任意入座</option>
+            <option>等段落空檔由工作人員指引</option>
+            <option>可站在通道拍照</option>
+            <option>與朋友打招呼</option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label class="block mb-2">3. 請評估你對「表演藝術基本知識」的自信程度 (0–100)：</label>
+          <input type="range" min="0" max="100" step="1" name="q3" class="w-full">
+        </div>
+
+        <div class="mb-4">
+          <label class="block mb-2">4. 你心中的「表演藝術」更接近：</label>
+          <div class="space-y-2">
+            <label>有距離感 1–7 親近感：<input type="number" name="q4a" min="1" max="7" required></label><br>
+            <label>無聊 1–7 有趣：<input type="number" name="q4b" min="1" max="7" required></label><br>
+            <label>難懂 1–7 易懂：<input type="number" name="q4c" min="1" max="7" required></label><br>
+            <label>昂貴 1–7 親民：<input type="number" name="q4d" min="1" max="7" required></label><br>
+            <label>嚴肅 1–7 多元：<input type="number" name="q4e" min="1" max="7" required></label>
+          </div>
+        </div>
+      </section>
+
+      <!-- 二、課程期待 -->
+      <section>
+        <h2 class="text-2xl font-semibold mb-4">二、期待課程內容</h2>
+        <p class="mb-2 text-gray-600">請以 1 (非常不同意) – 7 (非常同意) 評估：</p>
+
+        <div class="space-y-4">
+          <label>我希望課程包含後台參觀：
+            <input type="number" name="q5" min="1" max="7" required>
+          </label><br>
+          <label>我希望能有基礎肢體／聲音練習：
+            <input type="number" name="q6" min="1" max="7" required>
+          </label><br>
+          <label>我想了解如何成為觀眾（選節目、看節目、聊節目）：
+            <input type="number" name="q7" min="1" max="7" required>
+          </label><br>
+          <label>我對不同類型（戲劇、舞蹈、跨域、偶戲、即興）的入門介紹有興趣：
+            <input type="number" name="q8" min="1" max="7" required>
+          </label><br>
+          <label>我希望有期末小呈現（不計成績或低比重）：
+            <input type="number" name="q9" min="1" max="7" required>
+          </label>
+        </div>
+      </section>
+
+      <!-- 三、內化感受 -->
+      <section>
+        <h2 class="text-2xl font-semibold mb-4">三、從表演藝術獲得的內化感受</h2>
+        <div class="space-y-4">
+          <label>我能從作品中產生情緒共鳴：
+            <input type="number" name="q10" min="1" max="7" required>
+          </label><br>
+          <label>我能把作品與自己的生活經驗連結：
+            <input type="number" name="q11" min="1" max="7" required>
+          </label><br>
+          <label>我願意在演出後與同學分享想法：
+            <input type="number" name="q12" min="1" max="7" required>
+          </label><br>
+          <label>我能從作品看見不同觀點與價值：
+            <input type="number" name="q13" min="1" max="7" required>
+          </label><br>
+          <label>我能描述為何喜歡／不喜歡一個作品：
+            <input type="number" name="q14" min="1" max="7" required>
+          </label>
+        </div>
+
+        <div class="mt-4">
+          <label class="block mb-2">請用三個形容詞形容你對表演藝術的印象：</label>
+          <input type="text" name="q15" placeholder="形容詞1, 形容詞2, 形容詞3" class="border rounded p-2 w-full">
+        </div>
+      </section>
+
+      <!-- 四、專業技能 -->
+      <section>
+        <h2 class="text-2xl font-semibold mb-4">四、專業技能的加持</h2>
+        <div class="space-y-4">
+          <label>當眾表達的自信：
+            <input type="number" name="q16" min="1" max="7" required>
+          </label><br>
+          <label>即興反應與臨場解決能力：
+            <input type="number" name="q17" min="1" max="7" required>
+          </label><br>
+          <label>團隊協作與傾聽：
+            <input type="number" name="q18" min="1" max="7" required>
+          </label><br>
+          <label>肢體表達與聲音運用：
+            <input type="number" name="q19" min="1" max="7" required>
+          </label><br>
+          <label>對他人觀點的同理：
+            <input type="number" name="q20" min="1" max="7" required>
+          </label>
+        </div>
+      </section>
+
+      <!-- 送出 -->
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded">送出</button>
+    </form>
+
+    <!-- 結果區 -->
+    <div id="result" class="mt-6 hidden">
+      <h2 class="text-xl font-semibold mb-2">填答結果 (JSON)</h2>
+      <pre id="resultJson" class="bg-gray-100 p-4 rounded"></pre>
+      <button onclick="downloadCSV()" class="mt-2 bg-green-600 text-white px-4 py-2 rounded">下載 CSV</button>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
